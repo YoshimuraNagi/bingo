@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビンゴゲーム</title>
+</head>
+<style>
+    #bingo {
+        width: 350px;
+        padding-top: 10px;
+        margin: 0 auto;
+        height: 450px;
+        background-color: rgb(235, 234, 234);
+    }
+
+    #bingo th {
+        color: rgb(255, 140, 194);
+    }
+
+    #bingo th,
+    #bingo td {
+        text-align: center;
+        font-weight: normal;
+    }
+
+</style>
+
+<body>
+    <div class="game">
+        <table id="bingo">
+            <tbody>
+                <tr>
+                    <th>B</th>
+                    <th>I</th>
+                    <th>N</th>
+                    <th>G</th>
+                    <th>O</th>
+                </tr>
+                <tr>
+                    <td id="bi0"></td>
+                    <td id="bi1"></td>
+                    <td id="bi2"></td>
+                    <td id="bi3"></td>
+                    <td id="bi4"></td>
+                </tr>
+                <tr>
+                    <td id="bi5"></td>
+                    <td id="bi6"></td>
+                    <td id="bi7"></td>
+                    <td id="bi8"></td>
+                    <td id="bi9"></td>
+                </tr>
+                <tr>
+                    <td id="bi10"></td>
+                    <td id="bi11"></td>
+                    <td id="bi12"></td>
+                    <td id="bi13"></td>
+                    <td id="bi14"></td>
+                </tr>
+                <tr>
+                    <td id="bi15"></td>
+                    <td id="bi16"></td>
+                    <td id="bi17"></td>
+                    <td id="bi18"></td>
+                    <td id="bi19"></td>
+                </tr>
+                <tr>
+                    <td id="bi20"></td>
+                    <td id="bi21"></td>
+                    <td id="bi22"></td>
+                    <td id="bi23"></td>
+                    <td id="bi24"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    /* // Math.floor(Math.random()*20+1)
+    // function() {
+    //     let make_col = function(base) {
+    //         let arr = [];
+    //         for(let i = 0;i++) {
+
+    //         }
+    //     }
+    //     let list = [];
+    //     for(let i = 1; i++) {
+    //         let a = Math.floor(Math.random()*20+1;
+    //         list.push(arr[a])
+    //     }
+    // }
+    // let a = Math.floor(Math.random()*20+1);
+    // document.getElementById("bi0").textContent= Math.floor(Math.random()*20+1)
+    // document.getElementById("bi1").textContent= Math.floor(Math.random()*20+1) */
+
+    checkList = [];
+
+    for (let i = 0; i < 25; i++) {
+        document.getElementById(`bi${i}`).textContent = Math.floor(Math.random() * 74) + 1;
+        
+        document.getElementById(`bi${i}`).addEventListener("click", function(){
+            this.style.background = "pink";
+            this.textContent = "〇"
+        })
+        } 
+        // document.getElementById("bingo").addEventListener("click", function(){
+        //     this.style.
+        // })
+
+</script>
+
+</html>
